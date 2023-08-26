@@ -1,0 +1,133 @@
+@import "partials/reset";
+@import "partials/mixins";
+@import "partials/variables";
+
+/* Open Sans - Font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600;700;800&family=Open+Sans&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* FONT FAMILY */
+@font-face {
+    font-family: "Caballerus";
+    src: url("../media/fonts/Cinzel-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CABECERA */
+header.cabecera {
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    .titulo-principal {
+        font-size: $fuente-grande;
+        font-family: "Caballerus";
+        position: relative;
+        top: 60px;
+    }
+    nav.nav-bar {
+        @include tamano(180px,100%);
+        ul {
+            display: inline-block;
+            position: relative;
+            right: 32px;
+            top: 60%;
+            li {
+                display: inline-block;
+                list-style: none;
+                margin-left: 50px;
+                a {
+                    text-transform: uppercase;
+                    font-size: $fuente-mediano + 3;
+                    color: black;
+                    font-weight: bold;
+                    font-family: "Caballerus";
+                    .color2 {
+                        color: #b70f0a;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*SECTION ARTICULOS*/
+main {
+    section.seccion-articulos {
+        div.row {
+            .img-article1 {
+                background-image: url(../media/remers.png);
+                @include tamano(228px, 225px);
+                margin-bottom: 10px;
+                margin-inline: 40px;
+                a {
+                    text-decoration: none;
+                    h3 { 
+                        position: relative;
+                        right: 12px;
+                        top: 45%;
+                        @include tamano(100px, 225px);
+                        color: white;
+                        font-family: 'Open Sans';
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .img-article1:hover {
+                opacity: 0.8;
+            }
+            .img-article2 {
+                @extend .img-article1;
+                background-image: url(../media/buzos-y-camperas.png);
+            }
+            .img-article3 {
+                @extend .img-article1;
+                background-image: url(../media/gafas-de-sol.png);
+            }
+
+            div.img-portada {
+                img {
+                    @include tamano(100%, 100%);
+                }
+                .img-article:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+    section.seccion-articulos2 {
+        div.row {
+            .sec2-img-article1 {
+                background-image: url(../media/calzado.png);
+                @include tamano(240px, 400px);
+                background-color: #b70f0a;
+            }
+            .sec2-img-article1:hover {
+                opacity: 0.8;
+            }
+
+            .sec2-img-article2 {
+                @extend .sec2-img-article1;
+                background-image: url(../media/camisas.png);
+            }
+            h3.title-article {
+                position: relative;
+                top: 50%;
+                color: white;
+                font-family: 'Open Sans';
+                @include tamano(110px, 400px);
+                margin-left: 0px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.col-4 {
+        img.img-article {
+            @include tamano(100%, 100%);
+            background-size: cover;
+        }
+    }
+}
