@@ -1,0 +1,68 @@
+@import "partials/reset";
+@import "partials/mixins";
+@import "partials/variables";
+
+/* Open Sans - Font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600;700;800&family=Open+Sans&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* FONT FAMILY */
+@font-face {
+    font-family: "Caballerus";
+    src: url("../media/fonts/Cinzel-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CABECERA */
+header.cabecera {
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    .bxs-user-circle {
+        font-size: 44px;
+        color: black;
+        position: relative;
+        left: 25%;
+        top: 6px;
+    }
+    .bxs-cart {
+        font-size: 44px;
+        color: black;
+        position: relative;
+        right: 25%;
+        top: 6px;
+    }
+    a.link-inicio {
+        text-decoration: none;
+        color: black;
+        .titulo-principal {
+            font-size: $fuente-grande;
+            font-family: "Caballerus";
+            position: relative;
+            top: 60px;
+        }
+    }
+    nav.nav-bar {
+        @include tamano(180px,100%);
+        ul {
+            display: inline-block;
+            position: relative;
+            right: 32px;
+            top: 60%;
+            li {
+                display: inline-block;
+                list-style: none;
+                margin-left: 50px;
+                a {
+                    text-transform: uppercase;
+                    font-size: $fuente-mediano + 3;
+                    color: black;
+                    font-weight: bold;
+                    font-family: "Caballerus";
+                    .color2 {
+                        color: #b70f0a;
+                    }
+                }
+            }
+        }
+    }
+}

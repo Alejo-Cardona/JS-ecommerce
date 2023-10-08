@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- CUSTOM STYLES --->
+    <link rel="stylesheet" href="../CSS/registroUsuario.css">
+    <!-- BOXICONS --->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--NAVABR-->
+    <header class="cabecera">
+        <a href="../index.html" class="link-inicio">
+            <h1 class="titulo-principal">CABALLEUS</h1>
+        </a>
+        <!-- ICON USER--->
+        <a href="../Pages/registroUsuario.html">
+            <i class='bx bxs-user-circle'></i>
+        </a>
+        <!-- ICON CART--->
+        <a href="../Pages/carrito.html">
+            <i class='bx bxs-cart'></i>
+        </a>
+        <!-- MENU DE NAVEGACIÓN -->
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="..." class="text-decoration-none"><span class="color2">Coleccion</span></a>
+                </li>
+                <li>
+                    <a href="..." class="text-decoration-none">Calzados</a>
+                </li>
+                <li>
+                    <a href="..." class="text-decoration-none">Accesorios</a>
+                </li>
+                <li>
+                    <a href="..." class="text-decoration-none"><span class="color2">Contacto</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--FORM DE REGISTRO -->
+    <!-- MENSAJES DE ERROR -->
+    <section id="seccion_mensajes_error">
+    </section>
+    <div class="formulario-de-registro">
+        <!--FORM -->
+        <form class="form-registro">
+            <h4>REGISTRESE</h4>
+            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+            <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Email">
+            <input class="controls" type="number" name="number" id="number" placeholder="Ingrese su Número de celular">
+            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una contraseña">
+            <input class="boton-enviar" type="submit" value="Enviar" id="btn_enviar">
+        </form>
+    </div>
+
+
+    <script src="../JS/registroUsuario.js"></script>
+    <script src="../JS/models/Usuario.js"></script>
+</body>
+</html>

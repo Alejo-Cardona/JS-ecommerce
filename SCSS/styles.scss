@@ -17,11 +17,29 @@
 header.cabecera {
     background-color: rgb(239, 239, 239);
     text-align: center;
-    .titulo-principal {
-        font-size: $fuente-grande;
-        font-family: "Caballerus";
+    .bxs-user-circle {
+        font-size: 44px;
+        color: black;
         position: relative;
-        top: 60px;
+        left: 25%;
+        top: 6px;
+    }
+    .bxs-cart {
+        font-size: 44px;
+        color: black;
+        position: relative;
+        right: 25%;
+        top: 6px;
+    }
+    a.link-inicio {
+        text-decoration: none;
+        color: black;
+        .titulo-principal {
+            font-size: $fuente-grande;
+            font-family: "Caballerus";
+            position: relative;
+            top: 60px;
+        }
     }
     nav.nav-bar {
         @include tamano(180px,100%);
@@ -121,6 +139,71 @@ main {
             }
         }
     }
+
+
+    // SECTION MAS POPULARES
+    h2.titulo-mas-vendido {
+        margin-top: 80px;
+        align-items: center;
+        text-align: center;
+        font-family: "Caballerus";
+        span {
+            color: #b70f0a;
+        }
+    }
+    section.seccion-articulos-populares {
+        @include tamano(100%, 100%);
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        div.cuerpo_card {
+            @include tamano(340px, 220px);
+            background-color: #eeecec;
+            border-radius: 20px;
+            margin-left: 90px;
+            margin-bottom: 40px;
+            box-shadow: 2px 2px 8px;
+            img.img-producto {
+                @include tamano(66%, 100%);
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            h2.product-name {
+                margin-top: 10px;
+                font-size: $fuente-mediano + 8;
+                font-family: $tipo-de-fuente2;
+            }
+            p.product-price {
+                font-size: $fuente-mediano + 2;
+                font-weight: bold;
+            }
+        img.img-producto:hover {
+            opacity: 0.8;
+        }
+    }
+}
+}
+
+
+// MEDIA QUERYS
+//ICONOS
+@media screen and (max-width: 800px) {
+    header.cabecera {
+        .bxs-user-circle {
+            font-size: 44px;
+            position: relative;
+            top: 70px;
+        }
+        .bxs-cart {
+            font-size: 44px;
+            color: black;
+            position: relative;
+            right: 25%;
+            top: 70px;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -128,6 +211,36 @@ main {
         img.img-article {
             @include tamano(100%, 100%);
             background-size: cover;
+        }
+    }
+}
+
+//Navbar
+@media screen and (max-width: 500px) {
+    header.cabecera {
+        nav.nav-bar {
+            @include tamano(300px,100%);
+            ul {
+                display: inline-block;
+                position: relative;
+                right: 32px;
+                top: 40%;
+                li {
+                    display: inline-block;
+                    list-style: none;
+                    margin-left: 50px;
+                    a {
+                        text-transform: uppercase;
+                        font-size: $fuente-mediano + 3;
+                        color: black;
+                        font-weight: bold;
+                        font-family: "Caballerus";
+                        .color2 {
+                            color: #b70f0a;
+                        }
+                    }
+                }
+            }
         }
     }
 }
