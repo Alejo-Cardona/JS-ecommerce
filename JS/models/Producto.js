@@ -1,6 +1,6 @@
 
 class Producto {
-    constructor(categoria, nombre, id, color, precio = 0, imagenes = "") {
+    constructor(categoria = "" , nombre, id, color = "", precio = 0, imagenes = "", destacado = 0) {
         this.categoria = categoria.toUpperCase();
         this.nombre = nombre;
         this.id = parseInt(id);
@@ -8,11 +8,12 @@ class Producto {
         this.precio = parseFloat(precio);
         this.vendido = false
         this.imagenes = imagenes; // Un array de URLs de imágenes
+        this.destacado = destacado;
     }
 
     // Defino un metodo estatico para recuperar los metodos de la clase
     static new_Producto(objeto){
-        new Producto(objeto.categoria, objeto.nombre, objeto.id, objeto.color, objeto.precio, objeto.imagenes);
+        new Producto(objeto.categoria, objeto.nombre, objeto.id, objeto.categoria, objeto.precio, objeto.imagenes);
     }
 
     // Metodos de la clase

@@ -158,7 +158,7 @@ main section.seccion-articulos-populares {
 }
 main section.seccion-articulos-populares div.cuerpo_card {
   width: 220px;
-  height: 340px;
+  height: 360px;
   background-color: #eeecec;
   border-radius: 20px;
   margin-left: 90px;
@@ -167,7 +167,7 @@ main section.seccion-articulos-populares div.cuerpo_card {
 }
 main section.seccion-articulos-populares div.cuerpo_card img.img-producto {
   width: 100%;
-  height: 66%;
+  height: 55%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -179,6 +179,22 @@ main section.seccion-articulos-populares div.cuerpo_card h2.product-name {
 main section.seccion-articulos-populares div.cuerpo_card p.product-price {
   font-size: 22px;
   font-weight: bold;
+}
+main section.seccion-articulos-populares div.cuerpo_card .btn-info {
+  background-color: #575757;
+  color: white;
+  margin: 6px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+}
+main section.seccion-articulos-populares div.cuerpo_card .btn-carrito {
+  background-color: #b70f0a;
+  color: white;
+  margin: 6px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
 }
 main section.seccion-articulos-populares div.cuerpo_card img.img-producto:hover {
   opacity: 0.8;

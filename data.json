@@ -1,0 +1,202 @@
+{
+    "productos": [
+        {
+            "categoria": "Camisas",
+            "nombre": "Camisa Clinton",
+            "id": 891,
+            "color": "Blanco",
+            "precio": 4000,
+            "imagenes": [
+                "../media/product-images/Camisas-Clinton/Camisa-Clinton-blanca-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Camisas",
+            "nombre": "Camisa Clinton",
+            "id": 823,
+            "color": "Negro",
+            "precio": 4000,
+            "imagenes": [
+                "../media/product-images/Camisas-Clinton/Camisa-Clinton-Negra-f1.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Camisas",
+            "nombre": "Camisa Clinton",
+            "id": 812,
+            "color": "Bordo",
+            "precio": 4000,
+            "imagenes": [
+                "../media/product-images/Camisas-Clinton/Camisa-Clinton-bordo-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Remeras",
+            "nombre": "Remera Alex",
+            "id": 354,
+            "color": "Blanco",
+            "precio": 3000,
+            "imagenes": [
+                "../media/product-images/Remera-Alex/Remera-Alex-blanca.jpg"
+            ],
+            "destacado": 1
+        },
+        {
+            "categoria": "Remeras",
+            "nombre": "Remera Alex",
+            "id": 393,
+            "color": "Negro",
+            "precio": 3000,
+            "imagenes": [
+                "../media/product-images/Remera-Alex/Remera-Alex-negra.jpg"
+            ],
+            "destacado": 1
+        },
+        {
+            "categoria": "Remeras",
+            "nombre": "Remera MDQ",
+            "id": 310,
+            "color": "Bordo",
+            "precio": 3400,
+            "imagenes": [
+                "../media/product-images/Remera-Alex/Remera-MDQ-bordo-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Jeans",
+            "nombre": "Jean Vaquero",
+            "id": 302,
+            "color": "Azul",
+            "precio": 8000,
+            "imagenes": [
+                "../media/product-images/jeans-Vaquero/jean-vaquero.jpg"
+            ],
+            "destacado": 1
+        },
+        {
+            "categoria": "Jeans",
+            "nombre": "Jean Vaquero",
+            "id": 342,
+            "color": "Negro",
+            "precio": 8000,
+            "imagenes": [
+                "../media/product-images/jeans-Vaquero/jean-vaquero2.jpg"
+            ],
+            "destacado": 1
+        },
+        {
+            "categoria": "Camperas",
+            "nombre": "Campera Canelon",
+            "id": 203,
+            "color": "Azul",
+            "precio": 12000,
+            "imagenes": [
+                "../media/product-images/Camperas/Campera-canelon.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Camperas",
+            "nombre": "Chaqueta de cuero",
+            "id": 492,
+            "color": "Marron",
+            "precio": 16000,
+            "imagenes": [
+                "../media/product-images/Camperas/Chaqueta-de-cuero.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Camperas",
+            "nombre": "Buzo Harvard",
+            "id": 272,
+            "color": "Marron",
+            "precio": 8000,
+            "imagenes": [
+                "../media/product-images/Camperas/Buzo-Harvard-verde-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Calzado",
+            "nombre": "Zapato Oxford",
+            "id": 493,
+            "color": "Negro",
+            "precio": 9000,
+            "imagenes": [
+                "../media/product-images/Calzado-Oxford/zapato-oxford2.jpg"
+            ],
+            "destacado": 1
+        },
+        {
+            "categoria": "Calzado",
+            "nombre": "Zapato Oxford",
+            "id": 648,
+            "color": "Marron",
+            "precio": 9000,
+            "imagenes": [
+                "../media/product-images/Calzado-Oxford/zapato-oxford.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Lentes",
+            "nombre": "Lentes de sol Dasy",
+            "id": 334,
+            "color": "Negro",
+            "precio": 5000,
+            "imagenes": [
+                "../media/product-images/Lentes-Dasy/lentes-de-sol.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Lentes",
+            "nombre": "Lentes de sol miller",
+            "id": 452,
+            "color": "Negro",
+            "precio": 5200,
+            "imagenes": [
+                "../media/product-images/Lentes-Dasy/Lentes-de-sol-Miller-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Lentes",
+            "nombre": "Lentes de sol basics",
+            "id": 317,
+            "color": "Negro",
+            "precio": 4000,
+            "imagenes": [
+                "../media/product-images/Lentes-Dasy/lentes-de-sol-Basicos-f1.png"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Accesorios",
+            "nombre": "Pulcera Doble",
+            "id": 923,
+            "color": "Negro",
+            "precio": 2000,
+            "imagenes": [
+                "../media/product-images/Accesorios/Pulsera-doble.jpg"
+            ],
+            "destacado": 0
+        },
+        {
+            "categoria": "Accesorios",
+            "nombre": "Colgante de Acero",
+            "id": 972,
+            "color": "Negro",
+            "precio": 2000,
+            "imagenes": [
+                "../media/product-images/Accesorios/Collar-Colgante-de-Acero-f1.png"
+            ],
+            "destacado": 0
+        }
+    ]
+}

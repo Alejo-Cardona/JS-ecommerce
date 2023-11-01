@@ -24,6 +24,7 @@ header.cabecera {
         left: 25%;
         top: 6px;
     }
+
     .bxs-cart {
         font-size: 44px;
         color: black;
@@ -159,14 +160,14 @@ main {
         justify-content: space-between;
         align-items: center;
         div.cuerpo_card {
-            @include tamano(340px, 220px);
+            @include tamano(360px, 220px);
             background-color: #eeecec;
             border-radius: 20px;
             margin-left: 90px;
             margin-bottom: 40px;
             box-shadow: 2px 2px 8px;
             img.img-producto {
-                @include tamano(66%, 100%);
+                @include tamano(55%, 100%);
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }
@@ -178,6 +179,22 @@ main {
             p.product-price {
                 font-size: $fuente-mediano + 2;
                 font-weight: bold;
+            }
+            .btn-info {
+                background-color: #575757;
+                color: white;
+                margin: 6px;
+                padding: 5px;
+                border-radius: 8px;
+                border: none;
+            }   
+            .btn-carrito {
+                background-color: #b70f0a;
+                color: white;
+                margin: 6px;
+                padding: 5px;
+                border-radius: 8px;
+                border: none;
             }
         img.img-producto:hover {
             opacity: 0.8;

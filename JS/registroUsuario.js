@@ -54,7 +54,7 @@ function validar_formulario_registro() {
     }
 
     // Validación de la contraseña
-    if(nombre.length < 5){
+    if(contrasena.length < 5){
         let mensaje_ERROR = "- Ingresaste una contraseña muy corta. "
         mensajes_de_error += mensaje_ERROR;
     }
@@ -76,6 +76,15 @@ function validar_formulario_registro() {
 
         seccion_mensajes_error.style.display = 'block';
 
+        // Sweet Alert
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'ERROR AL ENVIAR EL FORMULARIO',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        
         for(mensaje of lista_mensajes_recuperada) {
             let new_p = document.createElement("p");
             new_p.classList.add("error_mensaje");
@@ -92,7 +101,6 @@ function validar_formulario_registro() {
 
 
 // ------------------ REGISTRO DEL USUARIO - DATA -------------------
-//no necesito un Array, ya que voy a guardar la info de una sola persona
 const nuevos_usuarios = new Array();
 const key_coleccion_datos = "8723";
 
@@ -118,7 +126,13 @@ function registrar_usuario(){
 
     localStorage.setItem(key_coleccion_datos, JSON.stringify(nuevos_usuarios));
 
-    alert(`Te registraste de forma exitosa ${nombre}`);
+    // Sweet Alert
+    Swal.fire({
+        icon: 'success',
+        title: `felicidades, te registraste de forma exitosa ${nombre}`,
+        showConfirmButton: false,
+        timer: 2000
+    })
 }
 
 

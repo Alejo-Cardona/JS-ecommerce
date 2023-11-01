@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- BOXICONS --->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <!-- Toastify --->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Custom styles-->
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>CABALLEUS</title>
@@ -32,10 +34,10 @@
                     <a href="..." class="text-decoration-none"><span class="color2">Coleccion</span></a>
                 </li>
                 <li>
-                    <a href="..." class="text-decoration-none">Calzados</a>
+                    <a href="./Pages/productos.html" class="text-decoration-none" id="jeans-link">Jeans</a>
                 </li>
                 <li>
-                    <a href="..." class="text-decoration-none">Accesorios</a>
+                    <a href="./Pages/productos.html" class="text-decoration-none" id="accesorios-link">Accesorios</a>
                 </li>
                 <li>
                     <a href="..." class="text-decoration-none"><span class="color2">Contacto</span></a>
@@ -48,22 +50,22 @@
         <section class="seccion-articulos container align-items-center justify-content-center text-center">
             <!--SECTION 1-->
             <div class="row">
-                <div class="img-portada col-12 col-md-8 mx-auto mb-3 mt-4"><a href=""><img src="./media/presentacion.png" class="img-article" alt=""></a></div>
+                <div class="img-portada col-12 col-md-8 mx-auto mb-3 mt-4"><a href="#articulos_populares"><img src="./media/presentacion.png" class="img-article" alt=""></a></div>
             </div>
             <!--SECTION 2-->
             <div class="row justify-content-center align-items-center d-sm-grid d-lg-flex">
                 <div class="col-4 img-article1">
-                    <a href="#section-cards">
+                    <a href="./Pages/productos.html">
                         <h3>Remeras</h3>
                     </a>
                 </div>
                 <div class="col-4 img-article2">
-                    <a href="#section-cards">
+                    <a href="./Pages/productos.html">
                         <h3>Buzos y Camperas</h3>
                     </a>
                 </div>
                 <div class="col-4 img-article3">
-                    <a href="#section-cards">
+                    <a href="./Pages/productos.html">
                         <h3>Lentes de Sol</h3>
                     </a>
                 </div>
@@ -73,27 +75,32 @@
         <section class="seccion-articulos2 container d-flex align-items-center justify-content-center text-center mt-3">
             <div class="row">
                 <div class="col-3 col-md-12 mx-2 sec2-img-article1">
-                    <a href="#section-cards" class="text-decoration-none">
+                    <a href="./Pages/productos.html" class="text-decoration-none">
                         <h3 class="title-article">Calzado</h3>
                     </a>
                 </div>
                 <div class="col-3 col-md-12 mx-2 sec2-img-article2">
-                    <a href="#section-cards" class="text-decoration-none">
+                    <a href="./Pages/productos.html" class="text-decoration-none">
                         <h3 class="title-article">Camisas</h3>
                     </a>
                 </div>
             </div>
         </section>
         <!--SECTION 4 -->
-        <h2 class="titulo-mas-vendido">LO MAS <span>VENDIDO</span></h2>
+        <h2 class="titulo-mas-vendido" id="articulos_populares">LO MAS <span>VENDIDO</span></h2>
         <section class="seccion-articulos-populares container mt-5 text-center">
         </section>
     </main>
-    
+
+</body>
+    <!-- Custom--->
     <script src="./JS/models/Producto.js"></script>
     <script src="./JS/models/Usuario.js"></script>
-    <script src="./JS/models/colecciones.js"></script>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/carrito.js"></script>
     <script src="./JS/main.js"></script>
+    <!-- Toastify --->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Bootsrap --->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
 </html>
