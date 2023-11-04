@@ -18,21 +18,20 @@ async function mostrarProductos_Categoria() {
         })
 
     } catch (error){
-        console.log("Error al obtener datos:" + error);
+        console.log("Error al obtener datos mostrarProductos_Categoria(): " + error);
     }
 }
 
 mostrarProductos_Categoria()
 
-
 //  GENERAR INFO DEL ARTICULO
 function generarInfoArticulo(nombre, precio, imagenes, color, categoria, id) {
-    let seccion_imagenes_articulo = document.querySelector(".seccion-imagenes-articulo")
-    let seccion_informacion_articulo = document.querySelector(".seccion-informacion-articulo")
+    let seccion_imagenes_articulo = document.querySelector(".seccion-imagenes-articulo");
+    let seccion_informacion_articulo = document.querySelector(".seccion-informacion-articulo");
 
     // Creo el cuerpo de la info
     let new_div = document.createElement("div");
-    new_div.classList.add("info");
+    new_div.classList.add("info_producto_article");
 
     // Creo la info
     let new_p1 = document.createElement("p");
@@ -49,16 +48,35 @@ function generarInfoArticulo(nombre, precio, imagenes, color, categoria, id) {
     new_p4.textContent = `Color: ${color}`
 
     // Creo los botones
+    //Boton para comprar
     let btn_comprar_product = document.createElement("button");
-    btn_comprar_product.textContent = `Comprar ahora` //Boton para comprar
+    btn_comprar_product.textContent = `Comprar ahora`; 
     btn_comprar_product.classList.add("btn_comprar_product");
     btn_comprar_product.addEventListener("click", function() {
-        agregarAlCarrito(id);
+        Swal.fire({
+            title: `Quieres proceder con el pago?`,
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Si',
+            denyButtonText: `No, me confundi`,
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                Swal.fire('Muchas gracias por tu compra!', '', 'success')
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 2000);
+            } else if (result.isDenied) {
+                Swal.fire('Cancelaste el proceso de pago', '', 'info')
+            }
+        })
     });
 
+    //Boton para añadir al carrito
     let btn_añadir_carrito = document.createElement("button");
-    btn_añadir_carrito.textContent = `Comprar ahora` //Boton para añadir al carrito
-    btn_añadir_carrito.classList.add("btn_comprar_product");
+    btn_añadir_carrito.textContent = `Agregar al carrito` 
+    btn_añadir_carrito.classList.add("btn_añadir_carrito");
     btn_añadir_carrito.addEventListener("click", function() {
         agregarAlCarrito(id);
     });
@@ -66,7 +84,7 @@ function generarInfoArticulo(nombre, precio, imagenes, color, categoria, id) {
     // Creo la imagen
     let new_img = document.createElement("img");
     new_img.classList.add("imagen_producto");
-    new_img.src = imagenes
+    new_img.src = imagenes;
     
     // Añado la imagen a la seccion
     seccion_imagenes_articulo.appendChild(new_img);
@@ -84,7 +102,7 @@ function generarInfoArticulo(nombre, precio, imagenes, color, categoria, id) {
 //  OBTENER INFO DEL ARTICULO
 async function obtenerInfoArticulo() {
     try {
-        let id_producto = localStorage.getItem("key_2323")
+        let id_producto = parseInt(localStorage.getItem("key_2323"));
 
         const resp = await fetch('../data.json');
         const data = await resp.json();
@@ -102,6 +120,8 @@ async function obtenerInfoArticulo() {
             }
         })
     } catch (error){
-        console.log("Error al obtener datos:" + error);
+        console.log("Error al obtener info del articulo: " + error);
     }
 }
+
+obtenerInfoArticulo();

@@ -27,7 +27,6 @@ function generar_card_articulo(seccion_spawn, nombre_producto,id_producto, preci
     new_btn1.addEventListener('click', function() {
         //Guardo el id para que no se pierda la redireccionar
         localStorage.setItem("key_2323", id_producto);
-        obtenerInfoArticulo();
         window.location.href = window.location.href.endsWith("index.html") ? "./Pages/articuloInfo.html" : "./articuloInfo.html";
     });
 
@@ -70,7 +69,7 @@ async function mostrarProductos_mas_destacados() {
             }
         })
     } catch (error){
-        console.log("Error al obtener datos:" + error);
+        console.log("Error al obtener datos mostrarProductos_mas_destacados():" + error);
     }
 }
 
